@@ -37,6 +37,19 @@ const mockParts: Record<string, Part[]> = {
     { id: '2', name: 'Покрышка 90/90-10', price: 1350, article: 'TIRE-9090-10' },
     { id: '3', name: 'Покрышка 130/70-12', price: 1800, article: 'TIRE-13070-12' },
   ],
+  'accessories': [
+    { id: '10', name: 'Пластиковый кофр для мотоцикла', price: 2500, article: 'ACC-BOX-01' },
+    { id: '11', name: 'Универсальные запчасти для скутера (набор)', price: 1800, article: 'ACC-UNI-SET' },
+  ],
+  'pitbike': [
+    { id: '12', name: 'Питбайк 125cc (полная комплектация)', price: 45000, article: 'PIT-125-FULL' },
+  ],
+  'oil': [
+    { id: '13', name: 'Моторное масло 2Т полусинтетика 1л (набор 5шт)', price: 1200, article: 'OIL-2T-5PC' },
+  ],
+  'bearings': [
+    { id: '14', name: 'Подшипник 6203 (универсальный)', price: 180, article: 'BEAR-6203' },
+  ],
 };
 
 const categoryNames: Record<string, string> = {
@@ -45,6 +58,10 @@ const categoryNames: Record<string, string> = {
   '2t-chain': '2т Китайцы цепные',
   'batteries': 'Аккумуляторы',
   'tires': 'Покрышки',
+  'accessories': 'Аксессуары',
+  'pitbike': 'Запчасти на Питбайки',
+  'oil': 'Масло, ХИМИЯ',
+  'bearings': 'Подшипники',
 };
 
 const CategoryPage = () => {
