@@ -35,8 +35,8 @@ const SalesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pb-20">
-      <header className="bg-primary text-primary-foreground p-4 sticky top-0 z-10 shadow-sm">
+    <div className="min-h-screen bg-background pb-20">
+      <header className="bg-primary text-primary-foreground p-4 sticky top-0 z-10 shadow-lg">
         <div className="flex items-center gap-3 max-w-2xl mx-auto">
           <Link to="/">
             <Icon name="ArrowLeft" size={24} />
@@ -46,15 +46,15 @@ const SalesPage = () => {
       </header>
 
       <div className="max-w-2xl mx-auto p-4">
-        <div className="mb-4 bg-orange-50 border border-orange-200 rounded-lg p-3">
-          <p className="text-sm text-orange-800">
+        <div className="mb-4 bg-secondary/20 border border-secondary rounded-lg p-3">
+          <p className="text-sm text-secondary">
             <strong>Внимание!</strong> Цена указана за количество товара, указанное в скобках
           </p>
         </div>
 
         <div className="mb-4">
           <div className="relative">
-            <Icon name="Search" size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Icon name="Search" size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <Input
               type="text"
               placeholder="Поиск по акциям..."
@@ -72,29 +72,29 @@ const SalesPage = () => {
               return (
                 <div
                   key={item.id}
-                  className="relative border-2 border-primary rounded-lg p-4 hover:bg-orange-50 transition-colors"
+                  className="relative border-2 border-secondary rounded-lg p-4 hover:bg-card transition-colors"
                 >
-                  <Badge className="absolute top-2 right-2 bg-red-500 text-white">
+                  <Badge className="absolute top-2 right-2 bg-destructive text-destructive-foreground">
                     -{discount}%
                   </Badge>
                   
                   <div className="pr-16">
                     <h3 className="font-medium text-base mb-1">{item.name}</h3>
                     {item.article && (
-                      <p className="text-sm text-gray-500 mb-2">Артикул: {item.article}</p>
+                      <p className="text-sm text-muted-foreground mb-2">Артикул: {item.article}</p>
                     )}
-                    <p className="text-sm text-gray-600 mb-3">Количество: {item.quantity} шт</p>
+                    <p className="text-sm text-muted-foreground mb-3">Количество: {item.quantity} шт</p>
                     
                     <div className="flex items-center gap-3">
-                      <span className="text-gray-400 line-through text-sm">{item.oldPrice} ₽</span>
-                      <span className="text-xl font-bold text-primary">{item.newPrice} ₽</span>
+                      <span className="text-muted-foreground line-through text-sm">{item.oldPrice} ₽</span>
+                      <span className="text-xl font-bold text-secondary">{item.newPrice} ₽</span>
                     </div>
                   </div>
                 </div>
               );
             })
           ) : (
-            <p className="text-center text-gray-500 py-8">
+            <p className="text-center text-muted-foreground py-8">
               {searchQuery ? 'Ничего не найдено' : 'Нет активных акций'}
             </p>
           )}

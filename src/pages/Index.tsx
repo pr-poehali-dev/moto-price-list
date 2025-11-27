@@ -45,15 +45,15 @@ const Index = () => {
   const salesCategories = filteredCategories.filter(cat => cat.name.includes('АКЦИЯ'));
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="bg-primary text-primary-foreground p-4 sticky top-0 z-10 shadow-sm">
+    <div className="min-h-screen bg-background">
+      <header className="bg-primary text-primary-foreground p-4 sticky top-0 z-10 shadow-lg">
         <h1 className="text-xl font-bold text-center">Каталог мотодеталей</h1>
       </header>
 
       <div className="max-w-2xl mx-auto p-4">
         <div className="mb-4">
           <div className="relative">
-            <Icon name="Search" size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Icon name="Search" size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <Input
               type="text"
               placeholder="Поиск по каталогу..."
@@ -64,13 +64,13 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 mb-6 border-b">
+        <div className="flex gap-2 mb-6 border-b border-border">
           <button
             onClick={() => setActiveTab('catalog')}
             className={`flex-1 py-3 font-medium transition-colors ${
               activeTab === 'catalog'
-                ? 'text-primary border-b-2 border-primary'
-                : 'text-gray-500'
+                ? 'text-secondary border-b-2 border-secondary'
+                : 'text-muted-foreground'
             }`}
           >
             Каталог
@@ -79,8 +79,8 @@ const Index = () => {
             onClick={() => setActiveTab('sales')}
             className={`flex-1 py-3 font-medium transition-colors ${
               activeTab === 'sales'
-                ? 'text-primary border-b-2 border-primary'
-                : 'text-gray-500'
+                ? 'text-secondary border-b-2 border-secondary'
+                : 'text-muted-foreground'
             }`}
           >
             Акции
@@ -98,11 +98,11 @@ const Index = () => {
                 >
                   <span className="text-3xl">{category.emoji}</span>
                   <span className="text-base flex-1">{category.name}</span>
-                  <Icon name="ChevronRight" size={20} className="text-gray-400" />
+                  <Icon name="ChevronRight" size={20} className="text-muted-foreground" />
                 </Link>
               ))
             ) : (
-              <p className="text-center text-gray-500 py-8">Ничего не найдено</p>
+              <p className="text-center text-muted-foreground py-8">Ничего не найдено</p>
             )
           ) : (
             salesCategories.length > 0 ? (
@@ -113,18 +113,18 @@ const Index = () => {
                   className="flex items-center gap-4 p-4 hover:bg-gray-50 active:bg-gray-100 transition-colors border-b border-gray-100"
                 >
                   <span className="text-3xl">{category.emoji}</span>
-                  <span className="text-base flex-1 text-primary font-medium">{category.name}</span>
-                  <Icon name="ChevronRight" size={20} className="text-primary" />
+                  <span className="text-base flex-1 text-secondary font-medium">{category.name}</span>
+                  <Icon name="ChevronRight" size={20} className="text-secondary" />
                 </Link>
               ))
             ) : (
-              <p className="text-center text-gray-500 py-8">Нет активных акций</p>
+              <p className="text-center text-muted-foreground py-8">Нет активных акций</p>
             )
           )}
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 text-center">
+      <div className="fixed bottom-0 left-0 right-0 bg-primary text-primary-foreground p-4 text-center shadow-lg">
         <p className="text-sm">Заказы</p>
       </div>
     </div>
