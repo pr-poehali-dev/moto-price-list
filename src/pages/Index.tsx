@@ -11,11 +11,11 @@ interface Category {
 }
 
 const categories: Category[] = [
-  { id: '1', name: '!!!! Новое в прайсе !!!!!', image: 'https://cdn.poehali.dev/files/ccb02bbf-9c0d-4efb-a1e6-efa74ac3a416.jpg', route: '/category/new' },
-  { id: '2', name: '139QMB 50-100cc Китайский мопед вариаторный', image: 'https://cdn.poehali.dev/files/c0c8affc-6368-416d-b82b-ae719a20f788.jpg', route: '/category/139qmb' },
-  { id: '3', name: '2т Китайцы цепные', image: 'https://cdn.poehali.dev/files/a931bae4-f061-41f4-8723-0187d08658c1.jpg', route: '/category/2t-chain' },
-  { id: '4', name: '152QMI 157QMJ 125-150cc Китайский мопед вариаторный', image: 'https://cdn.poehali.dev/files/2c25bcbc-5d94-4f36-96ed-8c98f505b249.jpg', route: '/category/152qmi' },
-  { id: '5', name: 'Aktive', image: 'https://cdn.poehali.dev/files/fd733e33-5155-4547-bc59-5283a61ad564.jpg', route: '/category/aktive' },
+  { id: '1', name: '!!!! Новое в прайсе !!!!!', image: 'https://cdn.poehali.dev/files/dfa81e9c-998a-4cca-a8f3-588f9c520e0f.jpg', route: '/category/new' },
+  { id: '2', name: '139QMB 50-100cc Китайский мопед вариаторный', image: 'https://cdn.poehali.dev/files/0ff6e11a-8d32-4b3f-9448-9def2089aa08.jpg', route: '/category/139qmb' },
+  { id: '3', name: '2т Китайцы цепные', image: 'https://cdn.poehali.dev/files/ada89d07-075a-4226-b971-05eb6d7eb1f5.jpg', route: '/category/2t-chain' },
+  { id: '4', name: '152QMI 157QMJ 125-150cc Китайский мопед вариаторный', image: 'https://cdn.poehali.dev/files/e22cb5c8-02b1-4cb0-9ef4-f334c8d3a367.jpg', route: '/category/152qmi' },
+  { id: '5', name: 'Aktive', image: 'https://cdn.poehali.dev/files/97861d4a-6b6b-4306-9689-db061c6ee68d.jpg', route: '/category/aktive' },
   { id: '6', name: 'Delta Alfa', image: 'https://cdn.poehali.dev/files/c0c8affc-6368-416d-b82b-ae719a20f788.jpg', route: '/category/delta-alfa' },
   { id: '7', name: 'Honda', image: 'https://cdn.poehali.dev/files/a931bae4-f061-41f4-8723-0187d08658c1.jpg', route: '/category/honda' },
   { id: '8', name: 'Suzuki', image: 'https://cdn.poehali.dev/files/2c25bcbc-5d94-4f36-96ed-8c98f505b249.jpg', route: '/category/suzuki' },
